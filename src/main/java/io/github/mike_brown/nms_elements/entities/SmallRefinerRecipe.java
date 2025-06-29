@@ -1,14 +1,16 @@
 package io.github.mike_brown.nms_elements.entities;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
 @Entity
 @Table(name="small_refiner_recipes")
+@AllArgsConstructor
+@NoArgsConstructor
 public class SmallRefinerRecipe implements Recipe {
-
     @Id
     @GeneratedValue(strategy=GenerationType.AUTO)
+    @Getter
     private int id;
 
     @ManyToOne
@@ -20,6 +22,7 @@ public class SmallRefinerRecipe implements Recipe {
 
     @ManyToOne
     @Getter
+    @Setter(value = AccessLevel.PACKAGE)
     protected Element targetElement;
 
     @Getter
@@ -29,5 +32,4 @@ public class SmallRefinerRecipe implements Recipe {
     public Boolean isTargetFor(Element element) {
         return this.targetElement == element;
     }
-
 }

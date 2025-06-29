@@ -4,10 +4,10 @@ import io.github.mike_brown.nms_elements.entities.Element;
 import io.github.mike_brown.nms_elements.entities.LargeRefinerRecipe;
 import io.github.mike_brown.nms_elements.entities.MediumRefinerRecipe;
 import io.github.mike_brown.nms_elements.entities.SmallRefinerRecipe;
-import io.github.mike_brown.nms_elements.serialisers.ElementOverviewSerializer;
+import io.github.mike_brown.nms_elements.serialisers.ElementOverviewJson;
 import lombok.Getter;
 
-@JsonSerialize(using=ElementOverviewSerializer.class)
+@JsonSerialize(using=ElementOverviewJson.Serializer.class)
 public class ElementOverview {
     @Getter
     private String notFound;
@@ -34,6 +34,8 @@ public class ElementOverview {
     public ElementOverview(String name) {
         this.notFound = name;
     }
+
+    public ElementOverview() {}
 
     public boolean isMissing() {
         return this.element == null;

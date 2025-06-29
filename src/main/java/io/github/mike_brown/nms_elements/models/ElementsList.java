@@ -7,5 +7,6 @@ import java.util.List;
 public record ElementsList(
         List<Element> common,
         List<Element> uncommon,
-        List<Element> rare) {
+        List<Element> rare,
+        List<Element> products) {
 }
