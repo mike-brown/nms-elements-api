@@ -2,7 +2,7 @@
 
 This is a mini-project to support the player in the game [No Man's Sky](https://www.nomanssky.com/). It is part of a suite that together for a player-aid whilst navigating through the game world.
 
-Specifically, it is a API service that surfaces some of the elements and refiner recipes from the game, providing the data through various endpoints and having all of the data pulled from a simple database. 
+Specifically, it is a API service that surfaces some of the elements and refiner recipes from the game, providing the data through various endpoints and having all the data pulled from a simple database. There is a [sister project for a UI](https://github.com/mike-brown/nms-elements-ui) that consumes this API and displays the data for the player.
 
 ## Why does this exist?
 
